@@ -10,7 +10,6 @@ lojas = pd.read_csv(r'Bases de Dados\Lojas.csv', sep=';', encoding='latin-1')
 # adicionando nome das lojas em vendas
 vendas = vendas.merge(lojas, on='ID Loja')
 
-
 # criei um dicionário de lojas
 dict_lojas = {}
 for loja in lojas['Loja']:
