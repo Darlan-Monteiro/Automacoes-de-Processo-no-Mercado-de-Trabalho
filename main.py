@@ -65,5 +65,9 @@ nome = emails.loc[emails['Loja']==loja, 'Gerente'].values[0]
 mail = outlook.CreateItem(0)
 mail.To = emails.loc[emails['Loja']==loja, 'E-mail'].values[0]
 mail.Subject = f'OnePage Dia {dia_indicador.day}/{dia_indicador.month} - Loja {loja}'
+mail.Body = 'Texto do E-mail'
 
 
+
+attachment  = pathlib.Path.cwd() / caminho_backup / loja / f'{dia_indicador.month}_{dia_indicador.day}_{loja}.xlsx'
+mail.Attachments.Add(str(attachment))
