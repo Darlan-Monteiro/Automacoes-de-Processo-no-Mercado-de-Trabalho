@@ -1,1 +1,1 @@
-loja
+print('E-mail da Diretoria enviado')
