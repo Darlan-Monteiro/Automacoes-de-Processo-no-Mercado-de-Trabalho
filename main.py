@@ -222,7 +222,7 @@ mail = outlook.CreateItem(0)
 mail.To = emails.loc[emails['Loja']=='Diretoria', 'E-mail'].values[0]
 mail.Subject = f'Ranking Dia {dia_indicador.day}/{dia_indicador.month}'
 mail.Body = f'''
-Prezados, bom dia
+Prezados, boa tarde
 
 Melhor loja do Dia em Faturamento: Loja {faturamento_lojas_dia.index[0]} com Faturamento R${faturamento_lojas_dia.iloc[0, 0]:.2f}
 Pior loja do Dia em Faturamento: Loja {faturamento_lojas_dia.index[-1]} com Faturamento R${faturamento_lojas_dia.iloc[-1, 0]:.2f}
@@ -237,6 +237,7 @@ Qualquer dúvida estou à disposição.
 Att.,
 Darlan
 '''
+
 
 # Anexos
 attachment  = pathlib.Path.cwd() / caminho_backup / f'{dia_indicador.month}_{dia_indicador.day}_Ranking Anual.xlsx'
