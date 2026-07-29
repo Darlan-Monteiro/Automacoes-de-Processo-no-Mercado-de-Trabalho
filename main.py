@@ -238,7 +238,7 @@ Att.,
 Darlan
 '''
 
-# anexos
+# Anexos
 attachment  = pathlib.Path.cwd() / caminho_backup / f'{dia_indicador.month}_{dia_indicador.day}_Ranking Anual.xlsx'
 mail.Attachments.Add(str(attachment))
 attachment  = pathlib.Path.cwd() / caminho_backup / f'{dia_indicador.month}_{dia_indicador.day}_Ranking Dia.xlsx'
