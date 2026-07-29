@@ -7,6 +7,7 @@ emails = pd.read_excel(r'Bases de Dados\Emails.xlsx')
 vendas = pd.read_excel(r'Bases de Dados\Vendas.xlsx')
 lojas = pd.read_csv(r'Bases de Dados\Lojas.csv', sep=';', encoding='latin-1')
 
+
 # adicionando nome das lojas em vendas
 vendas = vendas.merge(lojas, on='ID Loja')
 
